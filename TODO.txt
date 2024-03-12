@@ -1,0 +1,6 @@
+[] - add lucide icons
+
+[] - adicionar opções de customização?
+    -- talvez n precise
+
+[] - aumentar apenas tocando no lado
