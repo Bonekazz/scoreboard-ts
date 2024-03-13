@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="disable-double-tap">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,23 +7,36 @@
     <script type="module" defer src="/src/main.ts"></script>
     <title>Volei Scoreboard | Bonekazz</title>
   </head>
-  <body class="w-full">
+  <body class="disable-double-tap w-full h-full">
     <div class="flex h-[100vh]">
       <div class="bg-red-700 text-white w-[50%] h-full flex justify-center items-center text-[5em] cursor-pointer">
         <h2 id="leftside" class="text-[1.5em]">0</h2>
-        <div class="absolute bottom-5 flex gap-8">
-          <button id="sub-left-btn" class="bg-white text-black text-lg rounded-lg p-5 active:scale-95 transition-all ease-in-out cursor-pointer">-</button>
-          <button id="add-left-btn" class="bg-white text-black text-lg rounded-lg p-5 active:scale-95 transition-all ease-in-out cursor-pointer">+</button>
+        <div class="absolute bottom-[2vh] flex gap-8">
+          <button id="sub-left-btn" class="action-btn bg-white text-black text-lg rounded-lg p-5 transition-all ease-in-out cursor-pointer">
+            <i data-lucide="minus" stroke-width="3"></i>
+          </button>
+          <button id="add-left-btn" class="action-btn bg-white text-black text-lg rounded-lg p-5 transition-all ease-in-out cursor-pointer">
+            <i data-lucide="plus" stroke-width="3"></i>
+          </button>
         </div>
       </div>
-      <div class="absolute left-[46%] bottom-9">
-        <button id="reset-btn" class="border p-2 bg-white rounded-lg active:scale-95 transition-all">resetar</button>
+      <div class="absolute self-center bottom-[-1.5rem] reset-btn flex flex-col items-center gap-2">
+        <button id="reset-btn" class="action-btn border p-3 bg-white rounded-lg transition-all w-fit">
+          <i data-lucide="rotate-ccw" stroke-width="2"></i>
+        </button>
+        <div class="bg-black text-white opacity-[0.5] p-2 px-4 rounded-lg border transform scale-75">
+          <span>Criado por <span class="underline">Hierro Fernandes</span></span>
+        </div>
       </div>
       <div class="bg-blue-700 text-white w-[50%] h-full flex justify-center items-center text-[5em] cursor-pointer">
-        <h2 id="rightside" class="text-[1.5em]">0</h2>
-        <div class="absolute bottom-5 flex gap-8">
-          <button id="sub-right-btn" class="bg-white text-black text-lg rounded-lg p-5 active:scale-95 transition-all ease-in-out">-</button>
-          <button id="add-right-btn" class="bg-white text-black text-lg rounded-lg p-5 active:scale-95 transition-all ease-in-out">+</button>
+        <span id="rightside" class="text-[1.5em]">0</span>
+        <div class="absolute bottom-[2vh] flex gap-8">
+          <button id="sub-right-btn" class="action-btn bg-white text-black text-lg rounded-lg p-5 transition-all ease-in-out">
+            <i data-lucide="minus" stroke-width="3"></i>
+          </button>
+          <button id="add-right-btn" class="action-btn bg-white text-black text-lg rounded-lg p-5 transition-all ease-in-out">
+            <i data-lucide="plus" stroke-width="3"></i>
+          </button>
         </div>
       </div>
     </div>

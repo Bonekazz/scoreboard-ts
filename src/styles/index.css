@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+@layer components {
+    .disable-double-tap {
+        touch-action: manipulation;
+    }
+    .reset-btn {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
